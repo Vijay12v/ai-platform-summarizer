@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Summarizer Settings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 15px;
+      width: 320px;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    select, textarea {
+      width: 100%;
+      margin-top: 5px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .footer {
+      margin-top: 15px;
+      font-size: 12px;
+      text-align: center;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h2>Summarizer Settings</h2>
+
+  <label for="platformSelect">AI Platform:</label>
+  <select id="platformSelect">
+    <option value="chatgpt">ChatGPT</option>
+    <option value="gemini">Gemini</option>
+    <option value="claude">Claude</option>
+  </select>
+
+  <label for="promptInput">Custom Prompt:</label>
+  <textarea id="promptInput" rows="4" placeholder="e.g., Summarize this video clearly..."></textarea>
+
+  <button id="saveBtn">Save Settings</button>
+
+  <div class="footer">Your settings are saved automatically.</div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

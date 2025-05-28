@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Transcript Summarizer Launcher",
+  "version": "1.0",
+  "permissions": [
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.openai.com/*",
+    "*://*.google.com/*",
+    "*://*.claude.ai/*",
+    "*://chatgpt.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/one.png",
+    "32": "icons/two.png",
+    "48": "icons/three.png",
+    "128": "icons/four.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "settings.html",
+    "default_icon": {
+      "16": "icons/one.png",
+      "32": "icons/two.png",
+      "48": "icons/three.png"
+    }
+  }
+}
